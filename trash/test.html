@@ -1,0 +1,75 @@
+<div class="card mb-3" id="'+data.results[i].id+'"
+    style="max-width: 540px; padding: 0px; background-color: #3F424C; border-color: #F11819; margin-right: 15px;">
+    <div class="row g-0">
+        <div class="col-md-4">
+            <img style="height: 100%; border-right-style: solid; border-right-color: #F11819; border-right-width: 1px;"
+                src="https://image.tmdb.org/t/p/original'+data.results[i].poster_path+'" class="img-fluid rounded-start"
+                alt="...">
+        </div>
+        <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title" style="color: #EE3F3F;">'+data.results[i].title+'</h5>
+                <hr>
+                <h6 class="card-text" style="color: white;">
+                    Language code: '+data.results[i].original_language.toUpperCase()+'
+                    <hr>
+                    Certified: '+data.results[i].adult+'
+                    <hr>
+                    <i class="fas fa-star" style="color: #F11819;"></i> &nbsp'+data.results[i].vote_average+'
+                    <hr>
+                </h6>
+                <p class="card-text"><small class="text-muted">'+data.results[i].release_date+'</small></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!---->
+
+
+<div class="modal-header" style="border-color:#F11819;">
+    <h5 class="modal-title" id="exampleModalLabel" style="color: #EE3F3F;">'+data.title+'</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col">
+            <div class="card" style="width: 100%; background-color: #17161B;">
+                <img src="https://image.tmdb.org/t/p/original'+data.backdrop_path+'" class="card-img-top"
+                    alt="...">
+                <div class="card-body">
+                    <div style="font-size: 12px;" id="genres">
+                    </div>
+                    <hr>
+                    <button type="button" class="btn btn-danger btn-sm"><i class="fas fa-plus-circle"></i>
+                        &nbspRecommend</button>
+                    <br><br>
+                    <div class="row">
+                        <div class="col">
+                            <p class="card-text" style="color: white;">
+                                <i class="fas fa-star" style="color: #F11819;"></i> &nbsp'+data.vote_average+'
+                                <hr style="background-color: #F11819; opacity: 100%; height: 0.1px;">
+                                Revenue: &nbsp$'+data.revenue+'
+                                <hr style="background-color: #F11819; opacity: 100%; height: 0.1px;">
+                            </p>
+                        </div>
+                        <div class="col">
+                            <p class="card-text" style="color: white;">
+                                Status: &nbsp'+data.status+'
+                                <hr style="background-color: #F11819; opacity: 100%; height: 0.1px;">
+                                Release: &nbsp'+data.release_date+'
+                                <hr style="background-color: #F11819; opacity: 100%; height: 0.1px;">
+                            </p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <p>
+                            '+data.overview+'
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
