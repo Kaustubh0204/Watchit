@@ -15,6 +15,7 @@ $input.on('keydown', function () {
 });
 
 
+//Search movies/shows
 function doneTyping() {
 
     document.getElementById("movieresults").innerHTML = '';
@@ -26,14 +27,6 @@ function doneTyping() {
         .then(function (data) {
 
             for (i = 0; i < data.results.length; i++) {
-
-                // console.log(data.results[i].id);
-                // console.log(data.results[i].poster_path);
-                // console.log(data.results[i].title);
-                // console.log(data.results[i].original_language.toUpperCase());
-                // console.log(data.results[i].vote_count);
-                // console.log(data.results[i].vote_average);
-                // console.log(data.results[i].release_date);
 
 
                 if (data.results[i].poster_path == null) {
@@ -72,11 +65,9 @@ function doneTyping() {
 }
 
 
+//movie details
 function moviemodal(movieid) {
-
-    console.log(movieid);
     myArray = movieid.split(/([0-9]+)/);
-    console.log(myArray[0]);
     document.getElementById("moviemodalbody").innerHTML = '';
     document.getElementById("exampleModalLabel").innerHTML = '';
 
@@ -85,17 +76,6 @@ function moviemodal(movieid) {
             return response.json();
         })
         .then(function (data) {
-
-            // console.log(data.title);
-            // console.log(data.backdrop_path);
-            // for (i = 0; i < data.genres.length; i++) {
-            //     console.log(data.genres[i].name);
-            // }
-            // console.log(data.vote_average);
-            // console.log(data.revenue);
-            // console.log(data.status);
-            // console.log(data.release_date);
-            // console.log(data.overview);
 
             if (myArray[0] == 'movie') {
 
@@ -119,7 +99,7 @@ function moviemodal(movieid) {
                 }
 
                 document.getElementById("exampleModalLabel").innerHTML += data.title;
-                document.getElementById("moviemodalbody").innerHTML += '<div class="modal-body"> <div class="row"> <div class="col"> <div class="card" style="width: 100%; background-color: #17161B;"> <img src="' + data.backdrop_path + '" class="card-img-top" alt="..."> <div class="card-body"> <div style="font-size: 12px;" id="genres"> </div> <hr> <button onclick="Recommendations1(' + data.id + ',' + 1 + ')" type="button" class="btn btn-danger btn-sm"><i class="fas fa-plus-circle"></i> &nbspRecommend</button> <br><br> <div class="row"> <div class="col"> <p class="card-text" style="color: white;"> <i class="fas fa-star" style="color: #F11819;"></i> &nbsp' + data.vote_average + ' <hr style="background-color: #F11819; opacity: 100%; height: 0.1px;"> Revenue: &nbsp' + data.revenue + ' <hr style="background-color: #F11819; opacity: 100%; height: 0.1px;"> </p> </div> <div class="col"> <p class="card-text" style="color: white;"> Status: &nbsp' + data.status + ' <hr style="background-color: #F11819; opacity: 100%; height: 0.1px;"> Release: &nbsp' + data.release_date + ' <hr style="background-color: #F11819; opacity: 100%; height: 0.1px;"> </p> </div> </div> <br> <div class="row"> <p> ' + data.overview + ' </p> </div> </div> </div> </div> </div> </div>';
+                document.getElementById("moviemodalbody").innerHTML += '<div class="modal-body"> <div class="row"> <div class="col"> <div class="card" style="width: 100%; background-color: #17161B;"> <img src="' + data.backdrop_path + '" class="card-img-top" alt="..."> <div class="card-body"> <div style="font-size: 12px;" id="genres"> </div> <hr> <button onclick="Recommendations1(' + data.id + ',' + 1 + ')" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModal2" type="button" class="btn btn-danger btn-sm"><i class="fas fa-plus-circle"></i> &nbspRecommend</button> <br><br> <div class="row"> <div class="col"> <p class="card-text" style="color: white;"> <i class="fas fa-star" style="color: #F11819;"></i> &nbsp' + data.vote_average + ' <hr style="background-color: #F11819; opacity: 100%; height: 0.1px;"> Revenue: &nbsp' + data.revenue + ' <hr style="background-color: #F11819; opacity: 100%; height: 0.1px;"> </p> </div> <div class="col"> <p class="card-text" style="color: white;"> Status: &nbsp' + data.status + ' <hr style="background-color: #F11819; opacity: 100%; height: 0.1px;"> Release: &nbsp' + data.release_date + ' <hr style="background-color: #F11819; opacity: 100%; height: 0.1px;"> </p> </div> </div> <br> <div class="row"> <p> ' + data.overview + ' </p> </div> </div> </div> </div> </div> </div>';
                 for (i = 0; i < data.genres.length; i++)
                     document.getElementById("genres").innerHTML += '<span style="background-color: grey; padding: 4px; border-radius: 0.4vw; margin-right: 5px;">' + data.genres[i].name + '</span>';
             }
@@ -144,7 +124,7 @@ function moviemodal(movieid) {
                 }
 
                 document.getElementById("exampleModalLabel").innerHTML += data.name;
-                document.getElementById("moviemodalbody").innerHTML += '<div class="modal-body"> <div class="row"> <div class="col"> <div class="card" style="width: 100%; background-color: #17161B;"> <img src="' + data.backdrop_path + '" class="card-img-top" alt="..."> <div class="card-body"> <div style="font-size: 12px;" id="genres"> </div> <hr> <button onclick="Recommendations1(' + data.id + ',' + 0 + ')" type="button" class="btn btn-danger btn-sm"><i class="fas fa-plus-circle"></i> &nbspRecommend</button> <br><br> <div class="row"> <div class="col"> <p class="card-text" style="color: white;"> <i class="fas fa-star" style="color: #F11819;"></i> &nbsp' + data.vote_average + ' <hr style="background-color: #F11819; opacity: 100%; height: 0.1px;"> Voters: &nbsp' + data.vote_count.toLocaleString("en-US") + ' <hr style="background-color: #F11819; opacity: 100%; height: 0.1px;"> </p> </div> <div class="col"> <p class="card-text" style="color: white;"> Status: &nbsp' + data.status + ' <hr style="background-color: #F11819; opacity: 100%; height: 0.1px;"> Release: &nbsp' + data.first_air_date + ' <hr style="background-color: #F11819; opacity: 100%; height: 0.1px;"> </p> </div> </div> <br> <div class="row"> <p> ' + data.overview + ' </p> </div> </div> </div> </div> </div> </div>';
+                document.getElementById("moviemodalbody").innerHTML += '<div class="modal-body"> <div class="row"> <div class="col"> <div class="card" style="width: 100%; background-color: #17161B;"> <img src="' + data.backdrop_path + '" class="card-img-top" alt="..."> <div class="card-body"> <div style="font-size: 12px;" id="genres"> </div> <hr> <button onclick="Recommendations1(' + data.id + ',' + 0 + ')" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModal2" type="button" class="btn btn-danger btn-sm"><i class="fas fa-plus-circle"></i> &nbspRecommend</button> <br><br> <div class="row"> <div class="col"> <p class="card-text" style="color: white;"> <i class="fas fa-star" style="color: #F11819;"></i> &nbsp' + data.vote_average + ' <hr style="background-color: #F11819; opacity: 100%; height: 0.1px;"> Voters: &nbsp' + data.vote_count.toLocaleString("en-US") + ' <hr style="background-color: #F11819; opacity: 100%; height: 0.1px;"> </p> </div> <div class="col"> <p class="card-text" style="color: white;"> Status: &nbsp' + data.status + ' <hr style="background-color: #F11819; opacity: 100%; height: 0.1px;"> Release: &nbsp' + data.first_air_date + ' <hr style="background-color: #F11819; opacity: 100%; height: 0.1px;"> </p> </div> </div> <br> <div class="row"> <p> ' + data.overview + ' </p> </div> </div> </div> </div> </div> </div>';
                 for (i = 0; i < data.genres.length; i++)
                     document.getElementById("genres").innerHTML += '<span style="background-color: grey; padding: 4px; border-radius: 0.4vw; margin-right: 5px;">' + data.genres[i].name + '</span>';
             }
@@ -163,24 +143,39 @@ function moviemodal(movieid) {
 
 var db = firebase.firestore();
 
-db.collection("Recommendations").get().then((querySnapshot) => {
-    querySnapshot.forEach((doc) => {
-        // doc.data() is never undefined for query doc snapshots
-        console.log(doc.id, " => ", doc.data());
-    });
-});
-
+//pick yourself (users)
 function Recommendations1(id, mediatype) {
 
-    if (mediatype == 1) {
-        mediatype = 'movie';
-    } else {
+    document.getElementById("usermodalbody").innerHTML = '';
+
+    db.collection("Users").get().then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          
+
+            document.getElementById("usermodalbody").innerHTML += '<div class="row" style="text-align: center;"> <div class="col"> <button onclick="Recommendations2(this.id,' + id + ',' + mediatype + ')" id="' + doc.id + '" class="btn userbutton" style="border-color: #F11819; padding: 20px; border-radius: 2vw; min-width: 30vw;"><img class="img-fluid" src="' + doc.data().image + '" style="height: 50px; width: 50px; border-radius: 50%;" alt=""> &nbsp&nbsp' + doc.data().name + '</button> </div> </div> <br>'
+
+        });
+    });
+
+
+
+}
+
+//Push reccomendations
+function Recommendations2(user, mediaid, mediatype) {
+    console.log(user + ' ' + mediaid + ' ' + mediatype);
+
+    if (mediatype == 0) {
         mediatype = 'tv';
+    } else {
+        mediatype = 'movie';
     }
 
     db.collection("Recommendations").add({
-        id: id,
-        mediaType: mediatype
+        userId: user,
+        id: mediaid,
+        mediaType: mediatype,
+        time: Date.now()
     })
         .then((docRef) => {
             console.log("Document written with ID: ", docRef.id);
@@ -189,10 +184,123 @@ function Recommendations1(id, mediatype) {
             console.error("Error adding document: ", error);
         });
 
+    $('#exampleModal2').modal('hide');
+    $('#exampleModal3').modal('show');
+    
+}
+
+function registernewuser() {
+
+    db.collection("Users").add({
+        name: document.getElementById("newusername").value,
+        image: document.getElementById("newuserimage").value
+    })
+        .then((docRef) => {
+            console.log("Document written with ID: ", docRef.id);
+        })
+        .catch((error) => {
+            console.error("Error adding document: ", error);
+        });
+
+        $('#exampleModal2').modal('hide');
 }
 
 
+//display reccomendations [reccomendations.html]
 
+db.collection("Recommendations").orderBy("time", "desc").get().then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+
+        fetch('https://api.themoviedb.org/3/' + doc.data().mediaType + '/' + doc.data().id + '?api_key=67b9d9fa2b8bbd0f0eed63c06a11359b')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+
+                if (doc.data().mediaType == 'movie') {
+
+                    if (data.backdrop_path == null) {
+                        data.backdrop_path = 'https://samples-d4024.web.app/images/MoviePosterNA2.jpg'
+
+                    } else {
+                        data.backdrop_path = 'https://image.tmdb.org/t/p/original' + data.backdrop_path;
+                    }
+
+                    if (data.release_date == '') {
+                        data.release_date = 'N/A';
+                    }
+                    if (data.vote_average == 0) {
+                        data.vote_average = 'N/A';
+                    }
+                    if (data.revenue == 0) {
+                        data.revenue = 'N/A';
+                    } else {
+                        data.revenue = '$' + data.revenue.toLocaleString("en-US");
+                    }
+
+
+                    var docRef = db.collection("Users").doc(doc.data().userId);
+
+                    docRef.get().then((doc) => {
+                        if (doc.exists) { 
+                            console.log("Document data:", doc.data());
+
+                            document.getElementById("reccomendationscards").innerHTML += '<div class="col" style="margin-bottom: 2.6755vw;"><div class="card" style="width: 22rem; background-color: #17161B;"> <img src="'+data.backdrop_path+'" class="card-img-top" alt="..."> <div class="card-body"> <div style="font-size: 12px;" id="genres"> </div> <hr> <div class="row"> <div class="col"> <p class="card-text" style="color: white;"> <h5>' + data.title + '</h5> <hr style="background-color: #F11819; opacity: 100%; height: 0.1px;"> </p> </div> </div> <div class="row"> <div class="col"> <p class="card-text" style="color: white;"> <i class="fas fa-star" style="color: #F11819;"></i> &nbsp' + data.vote_average + ' <hr style="background-color: #F11819; opacity: 100%; height: 0.1px;"> </p> </div> </div> <div class="row"> <div class="col"> <p class="card-text" style="color: white; font-size: 11px;">' + data.overview + '<hr> </p> </div> </div> <div class="row"> <div class="col"> <p> <img src="'+doc.data().image+'" style="height: 50px; width: 50px; border-radius: 50%; border: solid 2px #F11819;" alt=""> &nbsp&nbsp'+doc.data().name+' </p> </div> </div> </div> </div></div>'
+
+                        } else {
+                            
+                            console.log("No such document!");
+                        }
+                    }).catch((error) => {
+                        console.log("Error getting document:", error);
+                    });
+
+                }
+
+                if (doc.data().mediaType == 'tv') {
+
+                    if (data.backdrop_path == null) {
+                        data.backdrop_path = 'https://samples-d4024.web.app/images/MoviePosterNA2.jpg'
+
+                    } else {
+                        data.backdrop_path = 'https://image.tmdb.org/t/p/original' + data.backdrop_path;
+                    }
+
+                    if (data.first_air_date == '') {
+                        data.first_air_date = 'N/A';
+                    }
+                    if (data.vote_average == 0) {
+                        data.vote_average = 'N/A';
+                    }
+                    if (data.vote_count == 0) {
+                        data.vote_count = 'N/A';
+                    }
+
+                    var docRef = db.collection("Users").doc(doc.data().userId);
+
+                    docRef.get().then((doc) => {
+                        if (doc.exists) { 
+                            console.log("Document data:", doc.data());
+
+                            document.getElementById("reccomendationscards").innerHTML += '<div class="col" style="margin-bottom: 2.6755vw;"><div class="card" style="width: 22rem; background-color: #17161B;"> <img src="'+data.backdrop_path+'" class="card-img-top" alt="..."> <div class="card-body"> <div style="font-size: 12px;" id="genres"> </div> <hr> <div class="row"> <div class="col"> <p class="card-text" style="color: white;"> <h5>' + data.name + '</h5> <hr style="background-color: #F11819; opacity: 100%; height: 0.1px;"> </p> </div> </div> <div class="row"> <div class="col"> <p class="card-text" style="color: white;"> <i class="fas fa-star" style="color: #F11819;"></i> &nbsp' + data.vote_average + ' <hr style="background-color: #F11819; opacity: 100%; height: 0.1px;"> </p> </div> </div> <div class="row"> <div class="col"> <p class="card-text" style="color: white; font-size: 11px;">' + data.overview + '<hr> </p> </div> </div> <div class="row"> <div class="col"> <p> <img src="'+doc.data().image+'" style="height: 50px; width: 50px; border-radius: 50%; border: solid 2px #F11819;" alt=""> &nbsp&nbsp'+doc.data().name+' </p> </div> </div> </div> </div></div>'
+
+                        } else {
+                          
+                            console.log("No such document!");
+                        }
+                    }).catch((error) => {
+                        console.log("Error getting document:", error);
+                    });
+
+                }
+
+            })
+            .catch(function (err) {
+
+            });
+
+    });
+});
 
 
 

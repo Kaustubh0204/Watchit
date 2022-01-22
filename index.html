@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Watchit</title>
+    <title>Watchit | Home</title>
     <link rel="icon" type="image/x-icon" href="assets/logo.png">
 
     <!--Bootstrap-->
@@ -24,103 +24,14 @@
     <!--JQuery-->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-
+    <!--My CSS files-->
+    <link href="style.css" rel="stylesheet">
 
 </head>
 
 <body style="background-color: #3F424C; font-family: 'Poppins', sans-serif;">
 
-
-    <style>
-        .hover-item {
-            transition: 0.3s;
-            opacity: 90%;
-        }
-
-        .hover-item:hover {
-            transform: translate(0, -5px);
-            cursor: pointer;
-            opacity: 100%;
-        }
-
-        .modal-dialog {
-            max-width: 600px;
-        }
-    </style>
-
-
-    <!-- Button trigger modal -->
-    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Launch demo modal
-    </button> -->
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content"
-                style="background-color: #1C1D22; color: white; border-color: #F11819; border-radius: 1vw;">
-
-                <div class="modal-header" style="border-color:#F11819;">
-                    <h5 class="modal-title" id="exampleModalLabel" style="color: #EE3F3F;"></h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body" id="moviemodalbody">
-                    <!-- <div class="row">
-                        <div class="col">
-                            <div class="card" style="width: 100%; background-color: #17161B;">
-                                <img src="https://image.tmdb.org/t/p/original/z4k7b66jAHP8sQbEahxss6Ct8BW.jpg"
-                                    class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <div style="font-size: 12px;">
-                                        <span
-                                            style="background-color: grey; padding: 4px; border-radius: 0.4vw; margin-right: 5px;">Drama</span>
-                                        <span
-                                            style="background-color: grey; padding: 4px; border-radius: 0.4vw; margin-right: 5px;">Comedy</span>
-                                        <span
-                                            style="background-color: grey; padding: 4px; border-radius: 0.4vw; margin-right: 5px;">Romance</span>
-                                    </div>
-                                    <hr>
-                                    <button type="button" class="btn btn-danger btn-sm"><i
-                                            class="fas fa-plus-circle"></i> &nbspRecommend</button>
-                                    <br><br>
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="card-text" style="color: white;">
-                                                <i class="fas fa-star" style="color: #F11819;"></i> &nbsp7.6
-                                                <hr style="background-color: #F11819; opacity: 100%; height: 0.1px;">
-                                                Revenue: &nbsp$60,000,000
-                                                <hr style="background-color: #F11819; opacity: 100%; height: 0.1px;">
-                                            </p>
-                                        </div>
-                                        <div class="col">
-                                            <p class="card-text" style="color: white;">
-                                                Status: &nbspReleased
-                                                <hr style="background-color: #F11819; opacity: 100%; height: 0.1px;">
-                                                Release: &nbsp2011-07-15
-                                                <hr style="background-color: #F11819; opacity: 100%; height: 0.1px;">
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <br>
-                                    <div class="row">
-                                        <p>
-                                            Three friends who were inseparable in childhood decide to go on a
-                                            three-week-long bachelor road trip to Spain, in order to re-establish
-                                            their bond and explore thrilling adventures, before one of them gets
-                                            married. What will they learn of themselves and each other during the
-                                            adventure?
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
-
-            </div>
-        </div>
-    </div>
-
+    <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
             <a class="navbar-brand p-2" href="" style="font-size: 30px; background-color: #1C1D22; border-radius: 1vw;">
@@ -134,16 +45,28 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <!-- <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li> -->
+
+                </ul>
+                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                    <li class="nav-item hover-item">
+                        <a class="nav-link active" aria-current="page" href="index.html" style="margin-right: 20px"><u style="text-decoration-color: #F11819; text-underline-offset: 10px;">Search</u></a>
+                    </li>
+                    <li class="nav-item hover-item">
+                        <a class="nav-link active" aria-current="page" href="reccomendations.html" style="margin-right: 20px">Reccomendations</a>
+                    </li>
+                    <li class="nav-item hover-item">
+                        <a class="nav-link active" aria-current="page" target="_blank" href="https://developers.themoviedb.org/3" style="margin-right: 20px">API Info &nbsp<i class="fas fa-external-link-alt"></i></a>
+                    </li>
+                    <li class="nav-item hover-item">
+                        <a class="nav-link active" aria-current="page" target="_blank" href="https://github.com/Kaustubh0204" style="margin-right: 20px">About me &nbsp<i class="fab fa-github"></i></a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
+    <!--Search results-->
     <div class="container my-4" style="background-color: #17161B; padding: 15px; border-radius: 1vw;">
-
         <div class="input-group mb-3 my-3">
             <span class="input-group-text" id="basic-addon1"
                 style="background-color: #1D1D26; border-color: #F11819;"><i class="fas fa-search"
@@ -153,31 +76,81 @@
         </div>
         <div class="container my-5">
             <div class="row justify-content-center" id="movieresults">
-                <!-- <div class="card mb-3" id=""
-                    style="max-width: 540px; padding: 0px; background-color: #3F424C; border-color: #F11819; margin-right: 15px;">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img style="height: 100%; border-right-style: solid; border-right-color: #F11819; border-right-width: 1px;"
-                                src="https://samples-d4024.web.app/images/MoviePosterNA.jpg"
-                                class="img-fluid rounded-start" alt="...">
+
+            </div>
+        </div>
+    </div>
+
+    <!--Modal 1-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content"
+                style="background-color: #1C1D22; color: white; border-color: #F11819; border-radius: 1vw;">
+
+                <div class="modal-header" style="border-color:#F11819;">
+                    <h5 class="modal-title" id="exampleModalLabel" style="color: #EE3F3F;"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="moviemodalbody">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal 2-->
+    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content"
+                style="background-color: #1C1D22; color: white; border-color: #F11819; border-radius: 1vw;">
+                <div class="modal-header" style="border-color:#F11819;">
+                    <h5 class="modal-title" id="exampleModalLabel2" style="color: #EE3F3F;">Pick yourself</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="usermodalbody">
+
+                </div>
+                <hr>
+                <div class="modal-body">
+                    <h6>Don't see yourself? Register straight away!</h6>
+                    <br>
+                    <div class="row" style="text-align: center;">
+                        <div class="col">
+                            <input class="form-control me-2" placeholder="Enter your name" id="newusername"
+                                style="background-color: #1D1D26; color: white; border-color: #F11819;">
                         </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title" style="color: #EE3F3F;">Attack on Titan</h5>
-                                <hr>
-                                <h6 class="card-text" style="color: white;">
-                                    Language code: JA
-                                    <hr>
-                                    Certified: UA
-                                    <hr>
-                                    <i class="fas fa-star" style="color: #F11819;"></i> &nbsp5.8
-                                    <hr>
-                                </h6>
-                                <p class="card-text"><small class="text-muted">2015-08-01</small></p>
-                            </div>
+                        <div class="col">
+                            <input class="form-control me-2" placeholder="Enter your image link" id="newuserimage"
+                                style="background-color: #1D1D26; color: white; border-color: #F11819;">
                         </div>
                     </div>
-                </div> -->
+                    <br>
+                    <div class="row">
+                        <div class="col-3">
+                            <button class="btn btn-danger" onclick="registernewuser()">Register</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal 3-->
+    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content"
+                style="background-color: #1C1D22; color: white; border-color: #F11819; border-radius: 1vw;">
+                <div class="modal-header" style="border-color:#F11819;">
+                    <h5 class="modal-title" id="exampleModalLabel3" style="color: #EE3F3F;">Recommendaion Posted</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body" style="text-align: center;">
+                    <i class="far fa-check-circle" style="font-size: 15rem; color: #EE3F3F;"></i>
+                </div>
+                <div class="modal-footer">
+                    <a href="reccomendations.html" type="button" class="btn btn-danger">Check out</a>
+                </div>
             </div>
         </div>
     </div>
@@ -186,7 +159,7 @@
     <!--Firestore Database-->
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-    
+
     <script>
         // Initialize Firebase
         var config = {
@@ -201,7 +174,7 @@
         firebase.initializeApp(config);
     </script>
 
-  
+
     <!--My JS Files-->
     <script src="script.js"></script>
 
