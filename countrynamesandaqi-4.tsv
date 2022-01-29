@@ -1,0 +1,254 @@
+		
+id	name	airQ
+-1	Northern Cyprus	0
+-2	Kosovo	0
+-3	Somaliland	0
+4	Afghanistan	181
+8	Albania	0
+10	Antarctica	34
+12	Algeria	0
+16	American Samoa	0
+20	Andorra	31
+24	Angola	0
+28	Antigua and Barbuda	0
+31	Azerbaijan	0
+32	Argentina	35
+36	Australia	15
+40	Austria	17
+44	Bahamas	0
+48	Bahrain	0
+50	Bangladesh	173
+51	Armenia	84
+52	Barbados	0
+56	Belgium	24
+60	Bermuda	0
+64	Bhutan	0
+68	Bolivia, Plurinational State of	0
+70	Bosnia and Herzegovina	56
+72	Botswana	0
+74	Bouvet Island	0
+76	Brazil	32
+84	Belize	0
+86	British Indian Ocean Territory	0
+90	Solomon Islands	0
+92	Virgin Islands, British	0
+96	Brunei Darussalam	0
+100	Bulgaria	31
+104	Myanmar	0
+108	Burundi	0
+112	Belarus	0
+116	Cambodia	0
+120	Cameroon	0
+124	Canada	20
+132	Cape Verde	0
+136	Cayman Islands	0
+140	Central African Republic	0
+144	Sri Lanka	0
+148	Chad	147
+152	Chile	46
+156	China	74
+158	Taiwan, Province of China	40
+162	Christmas Island	0
+166	Cocos (Keeling) Islands	0
+170	Colombia	0
+174	Comoros	0
+175	Mayotte	0
+178	Congo	0
+180	Congo, the Democratic Republic of the	0
+184	Cook Islands	0
+188	Costa Rica	14
+191	Croatia	28
+192	Cuba	0
+196	Cyprus	32
+203	Czech Republic	32
+204	Benin	0
+208	Denmark	27
+212	Dominica	0
+214	Dominican Republic	0
+218	Ecuador	30
+222	El Salvador	0
+226	Equatorial Guinea	0
+231	Ethiopia	40
+232	Eritrea	0
+233	Estonia	26
+234	Faroe Islands	0
+238	Falkland Islands (Malvinas)	0
+239	South Georgia and the South Sandwich Islands	0
+242	Fiji	0
+246	Finland	13
+248	Åland Islands	0
+250	France	28
+254	French Guiana	24
+258	French Polynesia	0
+260	French Southern Territories	0
+262	Djibouti	0
+266	Gabon	0
+268	Georgia	51
+270	Gambia	0
+275	Palestinian Territory, Occupied	0
+276	Germany	24
+288	Ghana	43
+292	Gibraltar	5
+296	Kiribati	0
+300	Greece	63
+304	Greenland	0
+308	Grenada	0
+312	Guadeloupe	33
+316	Guam	0
+320	Guatemala	27
+324	Guinea	24
+328	Guyana	0
+332	Haiti	0
+334	Heard Island and McDonald Islands	0
+336	Holy See (Vatican City State)	0
+340	Honduras	0
+344	Hong Kong	33
+348	Hungary	36
+352	Iceland	14
+356	India	88
+360	Indonesia	37
+364	Iran, Islamic Republic of	68
+368	Iraq	36
+372	Ireland	19
+376	Israel	50
+380	Italy	26
+384	Côte d'Ivoire	49
+388	Jamaica	0
+392	Japan	28
+398	Kazakhstan	60
+400	Jordan	34
+404	Kenya	0
+408	Korea, Democratic People's Republic of	45
+410	Korea, Republic of	55
+414	Kuwait	73
+417	Kyrgyzstan	61
+418	Lao People's Democratic Republic	48
+422	Lebanon	0
+426	Lesotho	0
+428	Latvia	0
+430	Liberia	0
+434	Libya	0
+438	Liechtenstein	21
+440	Lithuania	26
+442	Luxembourg	28
+446	Macao	55
+450	Madagascar	0
+454	Malawi	0
+458	Malaysia	20
+462	Maldives	0
+466	Mali	84
+470	Malta	41
+474	Martinique	31
+478	Mauritania	0
+480	Mauritius	0
+484	Mexico	51
+492	Monaco	24
+496	Mongolia	107
+498	Moldova, Republic of	32
+499	Montenegro	26
+500	Montserrat	0
+504	Morocco	0
+508	Mozambique	0
+512	Oman	0
+516	Namibia	0
+520	Nauru	0
+524	Nepal	0
+528	Netherlands	26
+531	Curaçao	0
+533	Aruba	0
+534	Sint Maarten (Dutch part)	0
+535	Bonaire, Sint Eustatius and Saba	0
+540	New Caledonia	19
+548	Vanuatu	0
+554	New Zealand	28
+558	Nicaragua	0
+562	Niger	0
+566	Nigeria	0
+570	Niue	0
+574	Norfolk Island	0
+578	Norway	15
+580	Northern Mariana Islands	0
+581	United States Minor Outlying Islands	24
+583	Micronesia, Federated States of	0
+584	Marshall Islands	0
+585	Palau	0
+586	Pakistan	116
+591	Panama	0
+598	Papua New Guinea	0
+600	Paraguay	0
+604	Peru	0
+608	Philippines	0
+612	Pitcairn	0
+616	Poland	36
+620	Portugal	30
+624	Guinea-Bissau	0
+626	Timor-Leste	0
+630	Puerto Rico	0
+634	Qatar	0
+638	Réunion	20
+642	Romania	24
+643	Russian Federation	27
+646	Rwanda	0
+652	Saint Barthélemy	0
+654	Saint Helena, Ascension and Tristan da Cunha	0
+659	Saint Kitts and Nevis	0
+660	Anguilla	0
+662	Saint Lucia	0
+663	Saint Martin (French part)	0
+666	Saint Pierre and Miquelon	0
+670	Saint Vincent and the Grenadines	0
+674	San Marino	0
+678	Sao Tome and Principe	0
+682	Saudi Arabia	43
+686	Senegal	0
+688	Serbia	47
+690	Seychelles	0
+694	Sierra Leone	0
+702	Singapore	32
+703	Slovakia	23
+704	Viet Nam	45
+705	Slovenia	0
+706	Somalia	0
+710	South Africa	46
+716	Zimbabwe	0
+724	Spain	32
+728	South Sudan	0
+729	Sudan	76
+732	Western Sahara	0
+740	Suriname	0
+744	Svalbard and Jan Mayen	0
+748	Swaziland	0
+752	Sweden	19
+756	Switzerland	25
+760	Syrian Arab Republic	0
+762	Tajikistan	116
+764	Thailand	46
+768	Togo	0
+772	Tokelau	0
+776	Tonga	0
+780	Trinidad and Tobago	32
+784	United Arab Emirates	95
+788	Tunisia	0
+792	Turkey	54
+795	Turkmenistan	36
+796	Turks and Caicos Islands	0
+798	Tuvalu	0
+800	Uganda	107
+804	Ukraine	22
+807	Macedonia, the former Yugoslav Republic of	55
+818	Egypt	0
+826	United Kingdom	23
+831	Guernsey	0
+832	Jersey	18
+833	Isle of Man	0
+834	Tanzania, United Republic of	0
+840	United States	24
+850	Virgin Islands, U.S.	0
+854	Burkina Faso	0
+858	Uruguay	0
+860	Uzbekistan	90
+862	Venezuela, Bolivarian Republic of	0
+876	Wallis and Futuna	0
+882	Samoa	0
+887	Yemen	0
+894	Zambia	0
